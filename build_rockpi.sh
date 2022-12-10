@@ -1,7 +1,7 @@
 #!/bin/bash
 
 OUTPUT="$(pwd)/images"
-BUILD_VERSION="22.03.2"
+BUILD_VERSION="21.02.3"
 BUILDER="https://downloads.openwrt.org/releases/${BUILD_VERSION}/targets/rockchip/armv8/openwrt-imagebuilder-${BUILD_VERSION}-rockchip-armv8.Linux-x86_64.tar.xz"
 KERNEL_PARTSIZE=1000 #Kernel-Partitionsize in MB
 ROOTFS_PARTSIZE=13000 #Rootfs-Partitionsize in MB
@@ -24,7 +24,7 @@ make clean
 sed -i "s/CONFIG_TARGET_KERNEL_PARTSIZE=.*/CONFIG_TARGET_KERNEL_PARTSIZE=$KERNEL_PARTSIZE/g" .config
 sed -i "s/CONFIG_TARGET_ROOTFS_PARTSIZE=.*/CONFIG_TARGET_ROOTFS_PARTSIZE=$ROOTFS_PARTSIZE/g" .config
 
-make image PROFILE="radxa_rock-pi-4a" \
+make image V=s PROFILE="radxa_rock-pi-4a" \
            PACKAGES="bash kmod-rt2800-usb rt2800-usb-firmware kmod-cfg80211 kmod-lib80211 kmod-mac80211 kmod-rtl8192cu \
                      base-files block-mount fdisk luci-app-minidlna minidlna samba4-server \
                      samba4-libs luci-app-samba4 wireguard-tools luci-app-wireguard wpa-supplicant hostapd \
