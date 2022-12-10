@@ -1,0 +1,14 @@
+
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option path 'platform/fe3c0000.usb/usb2/2-1/2-1:1.0'
+	option cell_density '0'
+	option disabled '1'
+
+config wifi-device 'radio1'
+	option type 'mac80211'
+	option path 'platform/fe380000.usb/usb1/1-1/1-1:1.0'
+	option channel '1'
+	option band '2g'
+	option cell_density '0'
+
