@@ -24,7 +24,7 @@ make clean
 sed -i "s/CONFIG_TARGET_KERNEL_PARTSIZE=.*/CONFIG_TARGET_KERNEL_PARTSIZE=$KERNEL_PARTSIZE/g" .config
 sed -i "s/CONFIG_TARGET_ROOTFS_PARTSIZE=.*/CONFIG_TARGET_ROOTFS_PARTSIZE=$ROOTFS_PARTSIZE/g" .config
 
-make image V=s PROFILE="radxa_rock-pi-4a" \
+make image V=s PROFILE="radxa_rock-pi-4" \
            PACKAGES="bash kmod-rt2800-usb rt2800-usb-firmware kmod-cfg80211 kmod-lib80211 kmod-mac80211 kmod-rtl8192cu \
                      base-files block-mount fdisk luci-app-minidlna minidlna samba4-server \
                      samba4-libs luci-app-samba4 wireguard-tools luci-app-wireguard wpa-supplicant hostapd \
