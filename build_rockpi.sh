@@ -44,6 +44,6 @@ make image V=s PROFILE="radxa_rock-pi-4" \
                      kmod-rtl8xxxu rtl8188eu-firmware kmod-rtl8192ce kmod-rtl8192cu kmod-rtl8192de \
                      adblock luci-app-adblock kmod-usb-net-asix-ax88179 \
                      kmod-fs-squashfs squashfs-tools-unsquashfs squashfs-tools-mksquashfs \
-                     kmod-fs-f2fs kmod-fs-vfat" \
+                     kmod-fs-f2fs kmod-fs-vfat git git-http jq" \
             FILES="${BASEDIR}/files/" \
             BIN_DIR="${OUTPUT}"
